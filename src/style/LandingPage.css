@@ -1,0 +1,618 @@
+/* Header Section */
+
+.header {
+    background-color: #F1F3FF;
+    max-width: auto;
+    height: 500px;
+}
+
+@media (max-width: 844px) {
+    .header {
+        width: 360px;
+        height: 657px;
+    }
+}
+
+
+.text-1 {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    color: #000000;
+    position: absolute;
+    width: 568px;
+    height: 108px;
+    top: 177px;
+}
+
+@media (max-width: 844px) {
+    .text-1 {
+        width: 328px;
+        height: 216px;
+        position: absolute;
+        top: 80px;
+    }
+}
+
+.text-2 {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000000;
+    line-height: 20px;
+    position: absolute;
+    width: 468px;
+    height: 60px;
+    top: 301px;
+}
+
+@media (max-width: 844px) {
+    .text-2 {
+        position: absolute;
+        width: 328px;
+        height: 216px;
+    }
+}
+
+.hero-button {
+    position: absolute;
+    top: 377px;
+}
+
+@media (max-width: 844px) {
+    .hero-button {
+        position: absolute;
+        top: 390px;
+    }
+}
+
+.car-image {
+    position: relative;
+    width: 750px;
+    height: 507px;
+    left: 580px;
+    top: -30px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: 2;
+}
+
+@media (max-width: 844px) {
+    .car-image {
+        position: relative;
+        width: 380px;
+        height: 250px;
+        left: -3px;
+        top: 350px;
+    }
+}
+
+.bmw-bg {
+    position: relative;
+    width: 735px;
+    height: 243px;
+    left: 562px;
+    top: -323px;
+    background: #0D28A6;
+    border-radius: 60px 0px 0px 0px;    
+    z-index: 1;
+}
+
+@media (max-width: 844px) {
+    .bmw-bg {
+        position: absolute;
+        width: 411px;
+        height: 118px;
+        left: 8px;
+        top: 538px;
+    }
+}
+
+/* Our Services Section*/
+
+.container-services {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: relative;
+    max-width: auto;
+    height: 380px;
+    left: 740px;
+    top: 140px;
+}
+
+@media (max-width: 844px) {
+    .container-services{
+        position: absolute;
+        width: 328px;
+        height: 468px;
+        left: 36px;
+        top: 969px;
+    }
+}
+
+.text-3 {
+    width: 468px;
+    height: 72px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    position: static;
+    top: 580px;
+    left: 890px;
+}
+
+@media (max-width: 844px) {
+    .text-3{
+        width: 328px;
+        height: 72px;
+    }
+}
+
+.text-4 {
+    width: 468px;
+    height: 80px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    position: static;
+    top: 680px;
+    left: 890px;
+}
+
+@media (max-width: 844px) {
+    .text-4{
+        width: 328px;
+        height: 100px;
+    }
+}
+
+.text-5 {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    position: static;
+}
+
+@media (max-width: 844px) {
+    .text-5{
+        width: 255px;
+        height: 40px;
+    }
+}
+
+
+.img-service {
+    position: relative;
+    width: 459px;
+    height: 428px;
+    left: 120px;
+    top: -240px;
+}
+
+@media (max-width: 844px) {
+    .img-service {
+        position: absolute;
+        width: 260px;
+        height: 230px;
+        left: 74px;
+        top: 717px;
+    }
+}
+
+
+/* WhyUs Section */
+
+.why-us {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 844px) {
+    .why-us {
+        position: absolute;
+        width: 328px;
+        height: 792px;
+        left: 40px;
+        top: 1513px;        
+    }
+}
+
+.why-text1 {
+    position: relative;
+    left: 40px;
+    height: 36px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+@media (max-width: 844px) {
+    .why-text1 {
+        position: absolute;
+        height: 36px;
+        left: 140px;
+        top: 1430px;     
+    }
+}
+
+
+.why-text2 {
+    position: relative;
+    left: 40px;
+    width: 468px;
+    height: 20px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+@media (max-width: 844px) {
+    .why-text2 {
+        position: absolute;
+        width: 328px;
+        height: 20px;
+        left: 70px;
+        top: 1469px;        
+    }
+}
+
+
+/* Testimonial Section */
+
+.testimoni {
+    width: auto;
+    height: 100px;
+    position: relative;
+    top: 60px;
+    margin: auto;
+    padding: 10px;
+}
+
+.testimoni-1 {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+
+@media (max-width: 844px) {
+    .testimoni-1 {
+        position: absolute;
+        height: 36px;
+        left: 4.44%;
+        right: 4.44%;
+        top: 1600px;      
+    }
+}
+
+.testimoni-2 {
+    width: auto;
+    height: 20px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+@media (max-width: 844px) {
+    .testimoni-2 {
+        position: absolute;
+        width: 328px;
+        height: 40px;
+        left: 10px;
+        top: 1640px;     
+    }
+}
+
+.testimonial {
+    position: relative;
+    width: 619px;
+    height: 270px;
+    left: 335px;
+    top: 60px;
+
+}
+
+@media (max-width: 844px) {
+    .testimonial{
+        position: absolute;
+        width: 328px;
+        height: 392px;
+        left: 16px;
+        top: 2397px; 
+    }
+}
+
+/* Sewa Mobil */
+
+.sewa-mobil {
+    position: absolute;
+    width: 1168px;
+    height: 326px;
+    left: 70px;
+    top: 78px;
+    }
+
+@media (max-width: 844px) {
+    .sewa-mobil{
+        position: absolute;
+        width: 328px;
+        height: 420px;
+        left: 16px;
+        top: 1953px; 
+    }
+}
+
+/* FAQ Section */
+
+.container-faq {
+    position: relative;
+    left: 60px;
+    top: 90px;
+}
+
+.faq {
+    position: relative;
+    left: 560px;
+    top: 20px;
+}
+
+@media (max-width: 844px) {
+    .faq{
+        position: absolute;
+        width: 328px;
+        height: 376px;
+        left: 30px;
+        top: 3270px;        
+    }
+}
+
+.faq-1 {
+    height: 36px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+@media (max-width: 844px) {
+    .faq-1{
+        position: absolute;
+        height: 36px;
+        left: -17px;
+        top: 1850px; 
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 36px;
+    }
+}
+
+.faq-2 {
+    width: 368px;
+    height: 20px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+@media (max-width: 844px) {
+    .faq-2 {
+        position: absolute;
+        width: 328px;
+        height: 40px;
+        left: -51px;
+        top: 1890px;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+/* Footer Section */
+
+.footer {
+    position: relative;
+    top: 130px;
+    left: 60px;
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 300px;
+    height: 128px;
+}
+
+@media (max-width: 844px) {
+    .footer-1 {
+        position: absolute;
+        width: 268px;
+        height: 40px;
+        left: -40px;
+        top: 2280px;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.footer-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    position: relative;
+    width: 100px;
+    height: 128px;
+    left: 360px;
+    top: -128px;
+}
+
+@media (max-width: 844px) {
+    .footer-2 {
+        position: absolute;
+        width: 268px;
+        height: 40px;
+        left: -40px;
+        top: 2427px;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.footer-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    position: relative;
+    width: 268px;
+    height: 68px;
+    left: 540px;
+    top: -256px;
+}
+
+@media (max-width: 844px) {
+    .footer-3 {
+        position: absolute;
+        width: 268px;
+        height: 40px;
+        left: -40px;
+        top: 2600px;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.footer-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    position: relative;
+    width: 268px;
+    height: 68px;
+    left: 870px;
+    top: -327px;
+}
+
+@media (max-width: 844px) {
+    .footer-4 {
+        position: absolute;
+        width: 268px;
+        height: 40px;
+        left: -40px;
+        top: 2700px;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* Search Car Section */
+
+.search-car {
+    position: relative;
+    width: 1047px;
+    height: 106px;
+    top: 100px;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+@media (max-width: 844px) {
+    .search-car {
+        display: none;
+    }
+}
+
+.frame {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 80px;
+    position: relative;
+    width: 999px;
+    height: 58px;
+    left: 50px;
+    top: 20px;
+}
+
+.input {
+    width: 208px;
+    height: 36px;
+    position: relative;
+    top: 4px;
+}
+
+.cari-mobil {
+    position: relative;
+    top: 33px;
+    width: 110px;
+    height: 36px;
+}
+
+
