@@ -8,6 +8,8 @@ const SearchCarMenu = () => {
     const [carData, setCardata] = useState([]);
     const [fName, setFname] = useState("");
     const [fCategory, setFcategory] = useState("");
+    const [fPrice, setFprice] = useState("");
+    const [fStatus, setFstatus] = useState("")
 
     useEffect(() => {
         axios
@@ -25,7 +27,7 @@ const SearchCarMenu = () => {
     
     const handleFilter = (e) => {
         axios
-        .get(`https://bootcamp-rent-cars.herokuapp.com/customer/v2/car?name=${fName}&category=${fCategory}`)
+        .get(`https://bootcamp-rent-cars.herokuapp.com/customer/v2/car?name=${fName}&category=${fCategory}&minPrice=${fPrice}&status=${fStatus}`)
         .then((res) => {
         console.log(res);
         setCardata(res.data.cars);
@@ -35,7 +37,15 @@ const SearchCarMenu = () => {
     
     const handleChangeCategory = (e) => {
         setFcategory(e.target.value);
-    }
+    };
+
+    const handlePrice = (e) => {
+        setFprice(e.target.value);
+    };
+
+    const handleStatus = (e) => {
+        setFstatus(e.target.value);
+    };
     
 
     return (
@@ -49,63 +59,59 @@ const SearchCarMenu = () => {
                             <input onChange={handleChangeName} type="text" id="input" placeholder="Ketik nama/tipe mobil"/>
                         </div>
                         <div className="kategori">
-                            <Dropdown>
+                            <Dropdown >
                                 <h5>Kategori</h5>
-                                <Form.Control sx={{ m: 1, minWidth: 120 }}
-                                    value={fCategory}
-                                    onChange={handleChangeCategory}
-                                    displayEmpty
-                                    >
-                                <Dropdown.Toggle id="dropdown-button-white-example1" variant="light">
-                                Masukan Kapasitas Mobil
-                                </Dropdown.Toggle>
-                                    <Dropdown.Menu variant="white">
-                                    <Dropdown.Item href="#/action-2">2 - 4 Orang</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">4 - 6 Orang</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-4">6 - 8 Orang</Dropdown.Item>
-                                </Dropdown.Menu>
-                                </Form.Control>
+                                <Form.Select onChange={handleChangeCategory} className="select-form" aria-label="Default select example">
+                                    <option value={""} disabled selected hidden>Masukan Kapasitas Mobil</option>
+                                    <option value={"small"}>2-4 Orang</option>
+                                    <option value={"medium"}>4-6 Orang</option>
+                                    <option value={"large"}>6-8 Orang</option>
+                                </Form.Select>
                             </Dropdown>
                         </div>
                         <div className="harga">
-                            <Dropdown>
+                            <Dropdown >
                                 <h5>Harga</h5>
-                                <Dropdown.Toggle id="dropdown-button-white-example1" variant="light">
-                                Masukan Harga Sewa per Hari
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu variant="white">
-                                    <Dropdown.Item href="#/action-2">Rp. 400.000</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Rp. 400.000 - Rp. 600.000</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-4">Rp. 800.000</Dropdown.Item>
-                                </Dropdown.Menu>
+                                <Form.Select onChange={handlePrice} className="select-form" aria-label="Default select example">
+                                    <option value={""} disabled selected hidden>Harga</option>
+                                    <option value={"200000"}>Rp. 200.000 - Rp. 500.000</option>
+                                    <option value={"400000"}>Rp. 500.000 - Rp. 700.000</option>
+                                    <option value={"700000"}>Rp. 700.000 - Rp. 800.000</option>
+                                </Form.Select>
                             </Dropdown>
                         </div>
                         <div className="status">
-                            <Dropdown>
-                                <h5>status</h5>
-                                <Dropdown.Toggle id="dropdown-button-white-example1" variant="light">
-                                Disewa
-                                </Dropdown.Toggle>
-                                    <Dropdown.Menu variant="white">
-                                    <Dropdown.Item href="#/action-2">Disewakan</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Belum Disewa</Dropdown.Item>
-                                </Dropdown.Menu>
+                            <Dropdown >
+                                <h5>Status</h5>
+                                <Form.Select onChange={handleStatus} className="select-form" aria-label="Default select example">
+                                    <option value={""} disabled selected hidden>Status</option>
+                                    <option value="false">Disewakan</option>
+                                    <option value="true">Belum Disewakan</option>
+                                </Form.Select>
                             </Dropdown>
                         </div>
-                        <div className="card-wrapper">
+                        <div>
+                            <Button onClick={handleFilter} className="cari-mobil" style={{ backgroundColor: '#5CB85F' }}>Cari Mobil</Button>
+                        </div>
+                    </div>
+                    <div className="card-wrapper">
                             {!!carData.length ? carData.map((item) => (
                                 <div className="car-card">
-                                    <p>{item.name}</p>
-                                    <h2>{item.price}/ hari</h2>
-                                    <p>Lorem ipsum</p>
-                                    <Link to={`/cardetail/${item.id}`}>
-                                        <Button onClick={handleFilter} className="cari-mobil" style={{ backgroundColor: '#5CB85F' }}>Cari Mobil</Button>
-                                    </Link>
+                                    <div className="img-container">
+                                        <img src={item.image} alt="car" />
+                                    </div>
+                                    <div className="car-text">
+                                        <p className="car-title">{item.name}</p>
+                                        <h2 className="car-price">{item.price} / hari</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    </div>
+                                        <Link to={`/cardetail/${item.id}`}>
+                                            <Button className="filter-button" style={{ backgroundColor: '#5CB85F' }}>Pilih Mobil</Button>
+                                        </Link>
                                 </div>
                                 ))
                             : null}
-                        </div>   
-                    </div>
+                        </div> 
                     </Col>
                 </Row>
             </Container>

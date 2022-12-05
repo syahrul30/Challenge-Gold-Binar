@@ -13,8 +13,12 @@ const SearchCar = () => {
                     <Header />
                     <Banner isButtonShow={false}/>
                 </div>
-                    <SearchCarMenu />
-                    <Footer/>
+                <div>
+                <SearchCarMenu />
+                </div>
+                <div className='search-footer'>
+                <Footer/>
+                </div>
             </Row>
             </Col>
         </Container>
