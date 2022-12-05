@@ -6,7 +6,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function Header() {
     return (
-        <>
+        <div>
         {['md'].map((expand) => (
             <Navbar key={expand}  expand={expand} className="mb-3">
             <Container fluid>
@@ -16,6 +16,7 @@ function Header() {
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                 placement="end"
+                className="sidebar"
                 >
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -34,7 +35,7 @@ function Header() {
             </Container>
             </Navbar>
         ))}
-        </>
+        </div>
     );
     }
 
